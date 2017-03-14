@@ -1,0 +1,1 @@
+INSERT INTO `52jscn_gongzuoshi_20140207_admin` VALUES('1','10','admin','c278fd58b101fc9f2b1d','锦尚中国','锦尚中国','锦尚中国','','1390226095','127.0.0.1');

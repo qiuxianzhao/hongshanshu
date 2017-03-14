@@ -1,0 +1,1 @@
+INSERT INTO `52jscn_gongzuoshi_20140207_homepageset` VALUES('hss/index.htm','../index.html','0');

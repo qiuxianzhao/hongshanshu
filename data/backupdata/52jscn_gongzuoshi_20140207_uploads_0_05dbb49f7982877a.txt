@@ -1,0 +1,6 @@
+INSERT INTO `52jscn_gongzuoshi_20140207_uploads` VALUES('1','1','∏ﬂ≈ƒ“«B','/uploads/130718/1-130GQ42K2Q4.jpg','1','240','320','0','84760','1374128872','1');
+INSERT INTO `52jscn_gongzuoshi_20140207_uploads` VALUES('2','2','¿∂—¿“Ùœ‰B','/uploads/allimg/130718/1-130GQ429540-L.jpg','1','0','0','0','20641','1374128994','1');
+INSERT INTO `52jscn_gongzuoshi_20140207_uploads` VALUES('3','3','…˙√¸ÃΩ≤‚“«','/uploads/allimg/130718/1-130GQ433190-L.jpg','1','0','0','0','21175','1374129199','1');
+INSERT INTO `52jscn_gongzuoshi_20140207_uploads` VALUES('4','4','µÁ∫∏ª˙','/uploads/allimg/130718/1-130GQ434410-L.png','1','0','0','0','477342','1374129281','1');
+INSERT INTO `52jscn_gongzuoshi_20140207_uploads` VALUES('5','5',' ÆŒÂ¥Áº‡ª§“«','/uploads/allimg/130718/1-130GQ436300-L.jpg','1','0','0','0','129268','1374129390','1');
+INSERT INTO `52jscn_gongzuoshi_20140207_uploads` VALUES('6','6','7¥Áº‡ª§“«','/uploads/allimg/130718/1-130GQ43U30-L.jpg','1','0','0','0','85265','1374129533','1');

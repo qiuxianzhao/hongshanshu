@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content=""> 
+<meta name="description" content=""> 
+<title>案例  /  消费电子_我的网站</title>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="/templets/hss/inc/main.css" />
+<script src="/templets/hss/inc/jquery-1.7.2.min.js"></script>
+<script src="/templets/hss/inc/fancyzoom/fancyzoom.js"></script>
+</head>
+<body class="body_case" onselectstart="return false">
+<div class="header">
+	<div class="container">
+		<div class="logo"><a href="/"></a></div><!--logo end-->
+		<div class="nav">
+            <ul>
+              <li class="home"><a href="/" class="jsbutton_h"></a></li>
+              <li class="case"><a href="/a/case" class="jsbutton_d"></a></li>
+              <li class="about"><a href="/a/about" class="jsbutton_p"></a></li>
+              <li class="contact"><a href="/a/contact" class="jsbutton_a"></a></li>
+              <li class="join"><a href="/a/join" class="jsbutton_j"></a></li>
+              <li class="blog"><a href="http://haoyoung.taobao.com" class="jsbutton_b"></a></li>
+            </ul>
+          </div><!--nav end-->
+		<div class="clear"></div>
+	</div>
+</div>
+
+<div class="banner">
+
+	<div class="title">
+		<img src="/templets/hss/inc/img/banner_title_case.png">
+	</div>
+	<div class="nav2">
+		<div  class="container">
+		<ul>
+			<li class="location">LOCATION</li>			<li ><a href='/' title='Home'>Home</a></li>
+						<li class="last"><a href='/a/case/' title='Case'>Case</a></li>
+						
+		</ul>
+		<div class="clear"></div>
+		</div>
+		<div class="bj2"></div>
+	</div>
+	
+</div>
+<div class="body">
+<div class="container">
+	<div class="case_btn">
+	<a href="/a/case/yiliaoshebei" class="btn1" id='x0'></a>
+	<a href="/a/case/xiaofeidianzi" class="btn2" id='x1'></a>
+	<a href="/a/case/anfangshebei " class="btn3" id='x2'></a>	
+	<a href="/a/case/jidianshebei" class="btn4" id='x3'></a>
+	<a href="/a/case/jiayongdianqi" class="btn5" id='x4'></a>
+	<a href="/a/case/chezaiyongpin" class="btn6" id='x5'></a>
+	
+	</div>
+ <div class="case_btn_split">
+ </div>
+<div style="height:60px">&nbsp;</div>
+<div class="case2">
+	
+</div>
+		<div style='float:right;margin-right:10px;'>
+			<ul style='display:block;float:right;list-style-type:none;' class='pagelist_ul'>
+             <li><span class="pageinfo">共 <strong>0</strong>页<strong>0</strong>条记录</span></li>
+
+			</ul>
+		</div>
+<div class="clear"></div>
+		
+		
+	</div>
+	<div class="out out_case">
+		<div class="m">
+		<a href="javascript:void(0);" onclick="history.go(-1)" class="btn1"></a>
+		<a href="http://weibo.com/u/3291898767" class="btn2" target=_blank></a>
+		<a href="http://t.qq.com/hopetree2013" class="btn3" target=_blank></a>
+		<a href="http://blog.sina.com.cn/hopetreeid" class="btn4" target=_blank></a>
+		<a href="/a/contact" class="btn5" target=_blank></a>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="copy">
+			Copyright &copy; 2010-2013 <span>Hopetree</span> All Internet
+	</div>
+</div>
+
+<div id="footer">
+  <div class="bottom">
+    <img src='/templets/hss/inc/img/bottom.jpg' title=''/>
+  </div>
+  <div class="tj" style="display:none;"><!--添加统计代码--></div>
+</div><!--footer end-->
+
+</body>
+</html>
+<script>
+function xbtn(obj,back_y)
+	{
+		
+		$(obj).each(function(){
+			var this_event=null;
+			$(this).addClass("xbtn").html($(this).html()+"<span class='xbtn_span'></span>");
+			var xy;
+			if( $(this).css('background-position') == undefined)
+			{
+				xy=[$(this).css('background-position-x'),$(this).css('background-position-y')];
+			}
+			else
+			{
+				xy=$(this).css('background-position').split(' ');
+			}
+
+			$('.xbtn_span' , this).css({
+				'background-image':$(this).css('background-image'),
+				'background-position': xy[0]+' '+back_y
+			}).hover(function(){
+					var obj= this;
+					function go()
+					{
+						
+						var v=$(obj).css('opacity')-0+0.1;
+						
+						if( v <=1 && this_event=='in')
+						{
+							if (v>0.9)
+							{
+								v=1;
+							}
+							$(obj).css({
+								'opacity':v,
+								'filter':'alpha(opacity='+(v*100)+')'
+							});
+							setTimeout(go,50);
+						}
+					}
+					this_event='in';
+					go();
+					
+			},function(){
+			
+					var obj= this;
+					function go()
+					{
+						var v=$(obj).css('opacity')-0.1;
+						if(v<0.1){v=0;}
+						if( v >=0 && this_event=='out')
+						{		
+							$(obj).css({
+								'opacity':v,
+								'filter':'alpha(opacity='+(v*100)+')'
+							});
+							
+							setTimeout(go,50);
+							
+						}
+					}
+					this_event='out';
+					go();
+			});
+			
+			
+		});
+		
+	}
+$(function(){
+	
+	xbtn(".header .btn1,.header .btn2,.header .btn3,.header .btn4,.header .btn5",'-41px');
+	xbtn(".out .btn1,.out .btn2,.out .btn3,.out .btn4,.out .btn5",'-93px');
+	/*xbtn(".logo",'-38px');*/
+	
+	$(document).mousemove(function(e) {
+		var offset=$(document).width()/2-e.clientX;
+		$(".banner").css({"background-position":( ($(document).width()-1600)/2+offset/4 -100 )+"px 0px"});
+		
+	});
+
+	function foot_scroll()
+	{
+		if($(document).scrollTop() < ($(document).height()-$(window).height())*0.7 )
+		{
+			$('.footer').animate({'bottom':'-278px'},800,function(){setTimeout(foot_scroll,500);});
+		}
+		else
+		{
+			$('.footer').animate({'bottom':'0px'},800,function(){setTimeout(foot_scroll,500);});
+		}
+	}
+	foot_scroll();
+	
+	 
+
+		
+});
+</script><script>
+var class_array={"id122":{"class":0,"color":[4]},"id106":{"class":1,"color":[4,5,6]},"id78":{"class":0,"color":[1,4,7]},"id102":{"class":2,"color":[3,4,5]},"id111":{"class":0,"color":[1,2,5]},"id119":{"class":-21,"color":[4]},"id123":{"class":2,"color":[0]},"id121":{"class":1,"color":[1]},"id120":{"class":2,"color":[1]},"id118":{"class":1,"color":[1]},"id117":{"class":0,"color":[1]},"id116":{"class":0,"color":[1,2]},"id115":{"class":1,"color":[3]},"id114":{"class":1,"color":[1,5,7]},"id113":{"class":3,"color":[1,2,5]},"id112":{"class":3,"color":[0]},"id110":{"class":2,"color":[4,7]},"id109":{"class":2,"color":[3,5]},"id108":{"class":0,"color":[1,2,5]},"id107":{"class":0,"color":[1,2,5]},"id105":{"class":0,"color":[1,3,5]},"id104":{"class":0,"color":[3,4,7]},"id103":{"class":0,"color":[2,3,4]},"id101":{"class":1,"color":[3,4]},"id100":{"class":0,"color":[2,3,5,6]},"id99":{"class":0,"color":[4,5]},"id98":{"class":0,"color":[1,5,6]},"id97":{"class":0,"color":[5,7]},"id96":{"class":1,"color":[5,7]},"id95":{"class":3,"color":[1,2,3,4,5]},"id94":{"class":2,"color":[3,4,7]},"id93":{"class":0,"color":[4,5,7]},"id92":{"class":0,"color":[2,4]},"id88":{"class":-21,"color":[1,4,5]},"id87":{"class":2,"color":[1,2,3,4,5,6,7]},"id86":{"class":3,"color":[1,2,5]},"id85":{"class":2,"color":[1,2,3,5]},"id84":{"class":3,"color":[1,2,5]},"id82":{"class":3,"color":[1,3,7]},"id81":{"class":3,"color":[3,4,7]},"id80":{"class":2,"color":[1,2,3,5]},"id79":{"class":3,"color":[1,2,4,5]},"id77":{"class":0,"color":[1,3,4]},"id75":{"class":2,"color":[1,3,4,5]}};
+function run_case(index,color)
+{
+	var id=0,x=0,y=0;
+	$('.case2 .case_f').each(function(){
+		x=parseInt(id/3);
+		y=( id%3);
+		$(this).css({'top':(215*x)+'px','left':(316*y)+'px'});
+		id++;
+	});
+	id=0;
+	$('.case2 .case_f').each(function(){
+		var info=class_array['id'+$(this).attr('id').replace('case_id_','')];
+		var res;
+		if(color==-1)
+		{
+			res=index==-1 || index == info['class']  ;
+		}
+		else
+		{
+			res=false;
+			for( var c in info['color'])
+			{
+				if( info['color'][c]==color)
+				{
+					res=true;
+				}
+			}
+		}
+		if(   res  )
+		{
+			x=parseInt(id/3);
+			y=( id%3);
+			$(this).show().stop().animate({'top':(222*x)+'px','left':((310*y)+7)+'px'},400);
+			id++;
+		}
+		else
+		{
+			$(this).fadeOut();
+		}
+		
+		
+	});
+	$('.case2').stop().animate({'height':(222*(x+1))+'px'});
+}
+
+$(function(){
+	
+	$('.case_btn a').hover(function(){
+		var fire_class='btn'+($(this).attr('id').replace('x','')-0+1)+'_fire';
+		if( ! $(this).hasClass(fire_class) )
+		{
+			$(this).css({'background-position-y':'-100px'}).stop().animate({'height':'96px'},400);
+		}
+	},function(){
+		var fire_class='btn'+($(this).attr('id').replace('x','')-0+1)+'_fire';
+		if( ! $(this).hasClass(fire_class))
+		{
+			$(this).css({'background-position-y':'0px'}).stop().animate({'height':'65px'},400);
+		}
+	});
+	$('.case_btn_split_body a').click(function(){
+		$('.case_btn a').each(function(){
+				var fire_class='btn'+($(this).attr('id').replace('x')-0+1)+'_fire';
+				$(this).css({'background-position-y':'0px'}).stop().animate({'height':'65px'},400).removeClass(fire_class);
+		});
+		run_case(-1,$(this).attr('id').replace('x',''));
+	});
+	$('.case_btn a').click(function(){
+		
+		var obj=this;
+		
+		var fire_class='btn'+($(this).attr('id').replace('x','')-0+1)+'_fire';
+		if( $(this).hasClass(fire_class) )
+		{
+			$(this).css({'background-position-y':'0px'}).stop().animate({'height':'65px'},400).removeClass(fire_class);
+			run_case(-1,-1);
+		}
+		else
+		{
+			$('.case_btn a').each(function(){
+				if(this==obj)
+				{	
+					$(this).addClass(fire_class).css({'height':'96px'});
+					run_case($(this).attr('id').replace('x',''),-1);
+				}
+				else
+				{
+					$(this).css({'background-position-y':'0px'}).stop().animate({'height':'65px'},400).removeClass(fire_class);
+				}
+			});
+		}
+		
+	});
+	$(".case2 .case_body").hover(function(){
+				$('.case_w',this).stop().animate({"bottom":"30px"},400);	
+				
+				$(".y",this).stop().css({'top':'20px'}).animate({'top':"63px"},400).show();
+				$('.fire',this).show();
+			},function(){
+				$('.case_w',this).stop().animate({"bottom":"14px"},400);
+				$('.fire, .y',this).hide();
+			});	
+	if( window.location.href.indexOf('#')>-1)
+	{
+		var xint=window.location.href.split('#');
+		xint=xint[xint.length-1];
+		$('.case_btn .btn'+xint).addClass('btn'+xint+'_fire').css({'height':'96px'});
+		run_case(xint-1,-1);
+	}
+	else
+	{
+		run_case(-1,-1);
+	}
+});
+</script>

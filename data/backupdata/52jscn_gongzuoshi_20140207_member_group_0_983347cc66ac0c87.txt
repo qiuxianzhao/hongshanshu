@@ -1,0 +1,1 @@
+INSERT INTO `52jscn_gongzuoshi_20140207_member_group` VALUES('1','≈Û”—','0');

@@ -1,0 +1,1 @@
+INSERT INTO `52jscn_gongzuoshi_20140207_flink` VALUES('2','1','http://www.hotym.com','流行源码社区','','','','1226375403','1','2');
